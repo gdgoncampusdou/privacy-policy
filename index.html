@@ -1,1 +1,243 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gizlilik Politikası</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --bg: #0d0f14;
+      --surface: #13161d;
+      --border: #1e2230;
+      --accent: #4fffb0;
+      --text: #c8cdd8;
+      --heading: #eef0f5;
+      --muted: #5a6070;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+      padding: 0 1.5rem;
+    }
+
+    /* Background grid */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 5rem 0 6rem;
+    }
+
+    /* Header */
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.3em 0.8em;
+      border-radius: 2px;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.1s forwards;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--heading);
+      line-height: 1.15;
+      margin-bottom: 0.6rem;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.2s forwards;
+    }
+
+    .meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 3.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.3s forwards;
+    }
+
+    /* Divider */
+    .divider {
+      width: 2.5rem;
+      height: 2px;
+      background: var(--accent);
+      margin-bottom: 3.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.35s forwards;
+    }
+
+    /* Sections */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeUp 0.5s forwards;
+    }
+
+    .section:nth-child(1) { animation-delay: 0.4s; }
+    .section:nth-child(2) { animation-delay: 0.5s; }
+    .section:nth-child(3) { animation-delay: 0.6s; }
+    .section:nth-child(4) { animation-delay: 0.7s; }
+    .section:nth-child(5) { animation-delay: 0.75s; }
+
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      color: var(--heading);
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    /* Status chip */
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--accent);
+      background: rgba(79,255,176,0.07);
+      border: 1px solid rgba(79,255,176,0.2);
+      border-radius: 99px;
+      padding: 0.25em 0.75em;
+      margin-top: 0.75rem;
+    }
+
+    .chip::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 6px var(--accent);
+    }
+
+    /* Contact */
+    .contact-link {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(79,255,176,0.3);
+      transition: border-color 0.2s;
+    }
+    .contact-link:hover { border-color: var(--accent); }
+
+    /* Footer */
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      opacity: 0;
+      animation: fadeUp 0.5s 0.85s forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      .section { padding: 1.4rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <span class="badge">Yasal Belge</span>
+  <h1>Gizlilik Politikası</h1>
+  <p class="meta">Son güncelleme: Mart 2025</p>
+  <div class="divider"></div>
+
+  <div class="sections">
+
+    <div class="section">
+      <div class="section-label">01 — Genel Bakış</div>
+      <h2>Veri Toplama</h2>
+      <p>Bu uygulama, kullanıcılardan hiçbir kişisel veri toplamamakta, işlememekte veya depolamamaktadır. Oyun tamamen çevrimdışı çalışır ve herhangi bir sunucuya bağlantı kurmaz.</p>
+      <span class="chip">Veri toplanmıyor</span>
+    </div>
+
+    <div class="section">
+      <div class="section-label">02 — Üçüncü Taraflar</div>
+      <h2>Üçüncü Taraf Hizmetler</h2>
+      <p>Uygulama; reklam ağları, analitik platformlar veya sosyal medya entegrasyonu gibi üçüncü taraf hizmetler içermemektedir. Kullanıcı verisi hiçbir şekilde paylaşılmaz.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-label">03 — İzinler</div>
+      <h2>Cihaz İzinleri</h2>
+      <p>Uygulama, temel işlevsellik için yalnızca gerekli sistem izinlerini kullanır. Konum, mikrofon, kamera veya rehber gibi hassas izinlere erişim talep edilmemektedir.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-label">04 — Çocuklar</div>
+      <h2>Çocukların Gizliliği</h2>
+      <p>Uygulama herhangi bir yaş grubundan kullanıcı verisi toplamamaktadır. 13 yaşın altındaki kullanıcılardan da dahil olmak üzere kimseye ait kişisel bilgi işlenmemektedir.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-label">05 — İletişim</div>
+      <h2>Bize Ulaşın</h2>
+      <p>Bu gizlilik politikasıyla ilgili sorularınız için: <a class="contact-link" href="mailto:email@example.com">email@example.com</a></p>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>Tüm uygulamalar için geçerlidir</span>
+    <span>© 2025 — Tüm hakları saklıdır</span>
+  </footer>
+
+</div>
+</body>
+</html>
