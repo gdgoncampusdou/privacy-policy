@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gizlilik Politikası</title>
+  <title>Gizlilik Politikası – MazeRoll</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,7 +28,6 @@
       padding: 0 1.5rem;
     }
 
-    /* Background grid */
     body::before {
       content: '';
       position: fixed;
@@ -50,7 +49,6 @@
       padding: 5rem 0 6rem;
     }
 
-    /* Header */
     .badge {
       display: inline-block;
       font-size: 0.7rem;
@@ -84,7 +82,6 @@
       animation: fadeUp 0.6s 0.3s forwards;
     }
 
-    /* Divider */
     .divider {
       width: 2.5rem;
       height: 2px;
@@ -94,7 +91,6 @@
       animation: fadeUp 0.6s 0.35s forwards;
     }
 
-    /* Sections */
     .section {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -105,11 +101,12 @@
       animation: fadeUp 0.5s forwards;
     }
 
-    .section:nth-child(1) { animation-delay: 0.4s; }
-    .section:nth-child(2) { animation-delay: 0.5s; }
-    .section:nth-child(3) { animation-delay: 0.6s; }
-    .section:nth-child(4) { animation-delay: 0.7s; }
-    .section:nth-child(5) { animation-delay: 0.75s; }
+    .section:nth-child(1) { animation-delay: 0.40s; }
+    .section:nth-child(2) { animation-delay: 0.48s; }
+    .section:nth-child(3) { animation-delay: 0.56s; }
+    .section:nth-child(4) { animation-delay: 0.64s; }
+    .section:nth-child(5) { animation-delay: 0.72s; }
+    .section:nth-child(6) { animation-delay: 0.80s; }
 
     .section-label {
       font-size: 0.68rem;
@@ -132,7 +129,10 @@
       color: var(--text);
     }
 
-    /* Status chip */
+    p + p {
+      margin-top: 0.6rem;
+    }
+
     .chip {
       display: inline-flex;
       align-items: center;
@@ -156,7 +156,17 @@
       box-shadow: 0 0 6px var(--accent);
     }
 
-    /* Contact */
+    .chip.warn {
+      color: #ffd166;
+      background: rgba(255,209,102,0.07);
+      border-color: rgba(255,209,102,0.25);
+    }
+
+    .chip.warn::before {
+      background: #ffd166;
+      box-shadow: 0 0 6px #ffd166;
+    }
+
     .contact-link {
       color: var(--accent);
       text-decoration: none;
@@ -165,7 +175,6 @@
     }
     .contact-link:hover { border-color: var(--accent); }
 
-    /* Footer */
     footer {
       margin-top: 3rem;
       padding-top: 1.5rem;
@@ -177,7 +186,7 @@
       flex-wrap: wrap;
       gap: 0.5rem;
       opacity: 0;
-      animation: fadeUp 0.5s 0.85s forwards;
+      animation: fadeUp 0.5s 0.95s forwards;
     }
 
     @keyframes fadeUp {
@@ -195,7 +204,7 @@
 
   <span class="badge">Yasal Belge</span>
   <h1>Gizlilik Politikası</h1>
-  <p class="meta">Son güncelleme: Mart 2025</p>
+  <p class="meta">MazeRoll &nbsp;·&nbsp; Son güncelleme: Mart 2025</p>
   <div class="divider"></div>
 
   <div class="sections">
@@ -203,38 +212,47 @@
     <div class="section">
       <div class="section-label">01 — Genel Bakış</div>
       <h2>Veri Toplama</h2>
-      <p>Bu uygulama, kullanıcılardan hiçbir kişisel veri toplamamakta, işlememekte veya depolamamaktadır. Oyun tamamen çevrimdışı çalışır ve herhangi bir sunucuya bağlantı kurmaz.</p>
+      <p>MazeRoll, kullanıcılardan hiçbir kişisel veri toplamamakta, işlememekte veya harici sunuculara göndermemektedir. Oyun tamamen çevrimdışı çalışır; internet bağlantısı gerektirmez ve herhangi bir sunucuya bağlantı kurmaz.</p>
+      <p>İlerleme ve ayarlar gibi veriler yalnızca cihazın yerel depolama alanına kaydedilir ve yalnızca kullanıcının erişimine açıktır.</p>
       <span class="chip">Veri toplanmıyor</span>
     </div>
 
     <div class="section">
-      <div class="section-label">02 — Üçüncü Taraflar</div>
+      <div class="section-label">02 — Oyun Motoru</div>
+      <h2>Unity Engine Hakkında</h2>
+      <p>Bu uygulama Unity oyun motoru ile geliştirilmiştir. Unity, bazı yapılandırmalarda varsayılan olarak anonim hata raporlama (crash reporting) veya tanılama verisi toplayabilir. MazeRoll'da bu özellikler etkinleştirilmemiştir.</p>
+      <p>Unity'nin kendi veri toplama pratikleri hakkında daha fazla bilgi için Unity Technologies'in gizlilik politikasını inceleyebilirsiniz: <a class="contact-link" href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">unity.com/legal/privacy-policy</a></p>
+      <span class="chip warn">Motor düzeyinde uyarı</span>
+    </div>
+
+    <div class="section">
+      <div class="section-label">03 — Üçüncü Taraflar</div>
       <h2>Üçüncü Taraf Hizmetler</h2>
-      <p>Uygulama; reklam ağları, analitik platformlar veya sosyal medya entegrasyonu gibi üçüncü taraf hizmetler içermemektedir. Kullanıcı verisi hiçbir şekilde paylaşılmaz.</p>
+      <p>Uygulama; reklam ağları, analitik platformlar veya sosyal medya entegrasyonu gibi üçüncü taraf hizmetler içermemektedir. Kullanıcı verisi hiçbir şekilde üçüncü taraflarla paylaşılmaz.</p>
     </div>
 
     <div class="section">
-      <div class="section-label">03 — İzinler</div>
+      <div class="section-label">04 — İzinler</div>
       <h2>Cihaz İzinleri</h2>
-      <p>Uygulama, temel işlevsellik için yalnızca gerekli sistem izinlerini kullanır. Konum, mikrofon, kamera veya rehber gibi hassas izinlere erişim talep edilmemektedir.</p>
+      <p>Uygulama, konum, mikrofon, kamera, rehber veya internet gibi hassas ya da ağ erişim izinleri talep etmemektedir. Ses yalnızca cihaz üzerinde yerel olarak oynatılır; herhangi bir kayıt yapılmaz.</p>
     </div>
 
     <div class="section">
-      <div class="section-label">04 — Çocuklar</div>
+      <div class="section-label">05 — Çocuklar</div>
       <h2>Çocukların Gizliliği</h2>
-      <p>Uygulama herhangi bir yaş grubundan kullanıcı verisi toplamamaktadır. 13 yaşın altındaki kullanıcılardan da dahil olmak üzere kimseye ait kişisel bilgi işlenmemektedir.</p>
+      <p>Uygulama herhangi bir yaş grubundan kullanıcı verisi toplamamaktadır. 13 yaşın altındaki kullanıcılar dahil kimseye ait kişisel bilgi işlenmemektedir.</p>
     </div>
 
     <div class="section">
-      <div class="section-label">05 — İletişim</div>
+      <div class="section-label">06 — İletişim</div>
       <h2>Bize Ulaşın</h2>
-      <p>Bu gizlilik politikasıyla ilgili sorularınız için: <a class="contact-link" href="mailto:gdgoncampusdou@gmail.com">email@example.com</a></p>
+      <p>Bu gizlilik politikasıyla ilgili sorularınız için: <a class="contact-link" href="mailto:gdgoncampusdou@gmail.com">gdgoncampusdou@gmail.com</a></p>
     </div>
 
   </div>
 
   <footer>
-    <span>Tüm uygulamalar için geçerlidir</span>
+    <span>MazeRoll uygulaması için geçerlidir</span>
     <span>© 2025 — Tüm hakları saklıdır</span>
   </footer>
 
