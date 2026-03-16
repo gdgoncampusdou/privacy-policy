@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gizlilik Politikası / Privacy Policy - GDG On Campus DOU</title>
+  <meta name="description" content="GDG On Campus DOU tarafından yayınlanan oyunlara ait gizlilik politikası. Privacy policy for games published by GDG On Campus DOU." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -26,6 +29,7 @@
       line-height: 1.8;
       min-height: 100vh;
       padding: 0 1.5rem;
+      overflow-x: hidden;
     }
 
     body::before {
@@ -168,6 +172,7 @@
       content: "";
       width: 6px;
       height: 6px;
+      flex-shrink: 0;
       border-radius: 50%;
       background: var(--accent);
       box-shadow: 0 0 6px var(--accent);
@@ -216,6 +221,15 @@
 
     @media (max-width: 480px) {
       .section { padding: 1.4rem 1.2rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-delay: 0ms !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
     }
   </style>
 </head>
@@ -284,17 +298,27 @@
 
       <div class="section">
         <div class="section-label">04 - Motor ve Altyapı / Engine and Platform</div>
-        <h2>Unity ve Benzeri Teknolojiler</h2>
+        <h2>Unity Oyun Motoru</h2>
 
         <div class="lang-block">
           <div class="lang-title">TR</div>
-          <p>Oyunlarımız Unity veya benzeri oyun altyapıları kullanabilir. Bu altyapılar, kendi teknik politikalarına bağlı olarak anonim hata raporlama veya tanılama verisi işleyebilir. Bu veriler bireysel kullanıcıyla ilişkilendirilmez ve ilgili altyapı sağlayıcısının sorumluluğundadır.</p>
+          <p>Oyunlarımız Unity Technologies tarafından geliştirilen Unity oyun motoru ile yapılmıştır. Unity, kendi yapılandırmasına bağlı olarak aşağıdaki anonim teknik verileri toplayabilir:</p>
+          <p>· Cihaz modeli, işletim sistemi sürümü ve donanım bilgileri<br />
+             · Anonim çökme (crash) ve hata raporları<br />
+             · Uygulama performans ve tanılama verileri</p>
+          <p>Bu veriler bireysel kullanıcıyla ilişkilendirilmez ve doğrudan Unity Technologies'in sorumluluğundadır. Unity'nin veri işleme pratikleri hakkında ayrıntılı bilgi için Unity'nin gizlilik politikasını inceleyebilirsiniz: <a class="contact-link" href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">unity.com/legal/privacy-policy</a></p>
         </div>
 
         <div class="lang-block">
           <div class="lang-title">EN</div>
-          <p>Our games may use Unity or similar game frameworks. Depending on their technical configuration, these frameworks may process anonymous crash or diagnostic data. Such data is not linked to individual users and is under the responsibility of the relevant infrastructure provider.</p>
+          <p>Our games are built with the Unity game engine developed by Unity Technologies. Depending on its configuration, Unity may collect the following anonymous technical data:</p>
+          <p>· Device model, operating system version, and hardware details<br />
+             · Anonymous crash and error reports<br />
+             · Application performance and diagnostic data</p>
+          <p>This data is not linked to individual users and is solely under the responsibility of Unity Technologies. For more information on Unity's data practices, please refer to Unity's privacy policy: <a class="contact-link" href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">unity.com/legal/privacy-policy</a></p>
         </div>
+
+        <span class="chip">Unity Technologies · Third-party processor</span>
       </div>
 
       <div class="section">
