@@ -2,11 +2,12 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gizlilik Politikası – MazeRoll</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gizlilik Politikası / Privacy Policy - GDG On Campus DOU</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
       --bg: #0d0f14;
       --surface: #13161d;
@@ -20,7 +21,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'DM Sans', sans-serif;
+      font-family: "DM Sans", sans-serif;
       font-weight: 300;
       line-height: 1.8;
       min-height: 100vh;
@@ -28,7 +29,7 @@
     }
 
     body::before {
-      content: '';
+      content: "";
       position: fixed;
       inset: 0;
       background-image:
@@ -43,7 +44,7 @@
     .wrapper {
       position: relative;
       z-index: 1;
-      max-width: 680px;
+      max-width: 760px;
       margin: 0 auto;
       padding: 5rem 0 6rem;
     }
@@ -64,7 +65,7 @@
     }
 
     h1 {
-      font-family: 'DM Serif Display', serif;
+      font-family: "DM Serif Display", serif;
       font-size: clamp(2rem, 5vw, 3rem);
       color: var(--heading);
       line-height: 1.15;
@@ -106,6 +107,7 @@
     .section:nth-child(4) { animation-delay: 0.64s; }
     .section:nth-child(5) { animation-delay: 0.72s; }
     .section:nth-child(6) { animation-delay: 0.80s; }
+    .section:nth-child(7) { animation-delay: 0.88s; }
 
     .section-label {
       font-size: 0.68rem;
@@ -117,7 +119,7 @@
     }
 
     h2 {
-      font-family: 'DM Serif Display', serif;
+      font-family: "DM Serif Display", serif;
       font-size: 1.15rem;
       color: var(--heading);
       margin-bottom: 0.75rem;
@@ -132,6 +134,22 @@
       margin-top: 0.6rem;
     }
 
+    .lang-block + .lang-block {
+      margin-top: 0.8rem;
+      padding-top: 0.8rem;
+      border-top: 1px dashed rgba(255, 255, 255, 0.08);
+    }
+
+    .lang-title {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
     .chip {
       display: inline-flex;
       align-items: center;
@@ -139,15 +157,15 @@
       font-size: 0.78rem;
       font-weight: 500;
       color: var(--accent);
-      background: rgba(79,255,176,0.07);
-      border: 1px solid rgba(79,255,176,0.2);
+      background: rgba(79, 255, 176, 0.07);
+      border: 1px solid rgba(79, 255, 176, 0.2);
       border-radius: 99px;
       padding: 0.25em 0.75em;
       margin-top: 0.75rem;
     }
 
     .chip::before {
-      content: '';
+      content: "";
       width: 6px;
       height: 6px;
       border-radius: 50%;
@@ -157,8 +175,8 @@
 
     .chip.warn {
       color: #ffd166;
-      background: rgba(255,209,102,0.07);
-      border-color: rgba(255,209,102,0.25);
+      background: rgba(255, 209, 102, 0.07);
+      border-color: rgba(255, 209, 102, 0.25);
     }
 
     .chip.warn::before {
@@ -169,10 +187,13 @@
     .contact-link {
       color: var(--accent);
       text-decoration: none;
-      border-bottom: 1px solid rgba(79,255,176,0.3);
+      border-bottom: 1px solid rgba(79, 255, 176, 0.3);
       transition: border-color 0.2s;
     }
-    .contact-link:hover { border-color: var(--accent); }
+
+    .contact-link:hover {
+      border-color: var(--accent);
+    }
 
     footer {
       margin-top: 3rem;
@@ -185,12 +206,12 @@
       flex-wrap: wrap;
       gap: 0.5rem;
       opacity: 0;
-      animation: fadeUp 0.5s 0.95s forwards;
+      animation: fadeUp 0.5s 0.98s forwards;
     }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(14px); }
-      to   { opacity: 1; transform: translateY(0); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 480px) {
@@ -199,62 +220,133 @@
   </style>
 </head>
 <body>
-<div class="wrapper">
+  <div class="wrapper">
+    <span class="badge">Yasal Belge / Legal Document</span>
+    <h1>Gizlilik Politikası / Privacy Policy</h1>
+    <p class="meta">GDG On Campus DOU oyunları için geçerlidir · Last updated: March 2026</p>
+    <div class="divider"></div>
 
-  <span class="badge">Yasal Belge</span>
-  <h1>Gizlilik Politikası</h1>
-  <p class="meta">MazeRoll &nbsp;·&nbsp; Son güncelleme: Mart 2025</p>
-  <div class="divider"></div>
+    <div class="sections">
+      <div class="section">
+        <div class="section-label">01 - Kapsam / Scope</div>
+        <h2>Bu Politika Kimleri Kapsar?</h2>
 
-  <div class="sections">
+        <div class="lang-block">
+          <div class="lang-title">TR</div>
+          <p>Bu gizlilik politikası, GDG On Campus DOU tarafından yayınlanan birden fazla mobil veya masaüstü oyun için geçerlidir. Oyuna özgü farklılıklar olabilir; böyle bir durumda ilgili oyunda ek açıklamalar sunulur.</p>
+        </div>
 
-    <div class="section">
-      <div class="section-label">01 — Genel Bakış</div>
-      <h2>Veri Toplama</h2>
-      <p>MazeRoll, kullanıcı gizliliğini ön planda tutmayı hedefler. Mevcut sürümde kişisel veri toplanması öngörülmemektedir; ilerleme ve ayarlar gibi veriler yalnızca cihazın yerel depolama alanına kaydedilmekte olup yalnızca kullanıcının erişimine açıktır.</p>
-      <p>Uygulamanın ilerleyen sürümlerinde eklenen özellikler doğrultusunda bu politika güncellenebilir. Herhangi bir değişiklik halinde kullanıcılar bilgilendirilecektir.</p>
-      <span class="chip">Gizlilik odaklı</span>
+        <div class="lang-block">
+          <div class="lang-title">EN</div>
+          <p>This privacy policy applies to multiple mobile and desktop games published by GDG On Campus DOU. There may be game-specific differences; if so, additional disclosures will be provided within the relevant game.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">02 - Veri Kullanımı / Data Use</div>
+        <h2>Hangi Veriler İşlenir?</h2>
+
+        <div class="lang-block">
+          <div class="lang-title">TR</div>
+          <p>Mevcut oyunlarımızda, oyun deneyimini sağlamak için gerekli olan minimum teknik veriler işlenebilir. Kayıt dosyaları, ayarlar, ilerleme ve performans ile ilgili bazı bilgiler cihazın yerel depolamasında tutulabilir.</p>
+          <p>Kişisel veri toplamayı hedeflemiyoruz. Ancak gelecekte yeni özellikler (ör. hesap sistemi, bulut kayıt, canlı etkinlikler) eklenirse, veri kategorileri ve işleme amacı açıkça güncellenir ve kullanıcılara bildirilir.</p>
+          <p>Yerel olarak saklanan veriler oyun silindiğinde cihazdan kaldırılır.</p>
+        </div>
+
+        <div class="lang-block">
+          <div class="lang-title">EN</div>
+          <p>In our current games, only the minimum technical data required to operate gameplay may be processed. Save files, settings, progression, and certain performance-related information may be stored on the local device.</p>
+          <p>We do not aim to collect personal data. However, if future features are introduced (e.g., account systems, cloud saves, live events), the data categories and purposes of processing will be clearly updated and communicated to users.</p>
+          <p>Locally stored data is removed from the device when the game is uninstalled.</p>
+        </div>
+
+        <span class="chip">Minimum veri ilkesi / Data minimization</span>
+      </div>
+
+      <div class="section">
+        <div class="section-label">03 - Reklam ve Analitik / Ads and Analytics</div>
+        <h2>Üçüncü Taraf Servisler</h2>
+
+        <div class="lang-block">
+          <div class="lang-title">TR</div>
+          <p>Mevcut durumda oyunlarımızda reklam ağları aktif değildir. Buna ek olarak, zorunlu olmadıkça analitik veya davranışsal takip araçları kullanmamayı hedefleriz.</p>
+          <p>Gelecekte reklam, analitik veya başka üçüncü taraf hizmetler eklenirse; kullanılan servisler, toplanan veri türleri ve ilgili seçenekler (varsa) bu politikada güncellenir.</p>
+        </div>
+
+        <div class="lang-block">
+          <div class="lang-title">EN</div>
+          <p>At present, ad networks are not active in our games. In addition, we aim to avoid analytics or behavioral tracking tools unless they are genuinely necessary.</p>
+          <p>If ads, analytics, or other third-party services are introduced in the future, this policy will be updated to explain the services used, the types of data involved, and any available user choices.</p>
+        </div>
+
+        <span class="chip warn">Şu an reklam yok / No ads currently</span>
+      </div>
+
+      <div class="section">
+        <div class="section-label">04 - Motor ve Altyapı / Engine and Platform</div>
+        <h2>Unity ve Benzeri Teknolojiler</h2>
+
+        <div class="lang-block">
+          <div class="lang-title">TR</div>
+          <p>Oyunlarımız Unity veya benzeri oyun altyapıları kullanabilir. Bu altyapılar, kendi teknik politikalarına bağlı olarak anonim hata raporlama veya tanılama verisi işleyebilir. Bu veriler bireysel kullanıcıyla ilişkilendirilmez ve ilgili altyapı sağlayıcısının sorumluluğundadır.</p>
+        </div>
+
+        <div class="lang-block">
+          <div class="lang-title">EN</div>
+          <p>Our games may use Unity or similar game frameworks. Depending on their technical configuration, these frameworks may process anonymous crash or diagnostic data. Such data is not linked to individual users and is under the responsibility of the relevant infrastructure provider.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">05 - Çocukların Gizliliği / Children's Privacy</div>
+        <h2>Çocuk Kullanıcı Koruma Yaklaşımı</h2>
+
+        <div class="lang-block">
+          <div class="lang-title">TR</div>
+          <p>13 yaş altındaki çocuklardan bilerek kişisel veri toplamayız. Böylesi bir durum fark edilirse ilgili veri makul süre içinde silinmeye çalışılır.</p>
+        </div>
+
+        <div class="lang-block">
+          <div class="lang-title">EN</div>
+          <p>We do not knowingly collect personal data from children under 13. If such processing is identified, reasonable steps will be taken to delete the data.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">06 - Politika Güncellemeleri / Policy Updates</div>
+        <h2>Değişiklikler Nasıl Duyurulur?</h2>
+
+        <div class="lang-block">
+          <div class="lang-title">TR</div>
+          <p>Bu politika zaman zaman güncellenebilir. Önemli değişikliklerde oyun içi bildirim, mağaza sayfası açıklaması veya resmi iletişim kanallarımızdan duyuru yapılabilir.</p>
+        </div>
+
+        <div class="lang-block">
+          <div class="lang-title">EN</div>
+          <p>This policy may be updated from time to time. Material changes may be announced through in-game notices, store listing updates, or our official communication channels.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">07 - İletişim / Contact</div>
+        <h2>Bize Ulaşın</h2>
+
+        <div class="lang-block">
+          <div class="lang-title">TR</div>
+          <p>Bu politika ile ilgili sorularınız veya verilerinize ilişkin talepleriniz için: <a class="contact-link" href="mailto:gdgoncampusdou@gmail.com">gdgoncampusdou@gmail.com</a></p>
+        </div>
+
+        <div class="lang-block">
+          <div class="lang-title">EN</div>
+          <p>For questions about this policy or any requests regarding your data: <a class="contact-link" href="mailto:gdgoncampusdou@gmail.com">gdgoncampusdou@gmail.com</a></p>
+        </div>
+      </div>
     </div>
 
-    <div class="section">
-      <div class="section-label">02 — Oyun Motoru</div>
-      <h2>Unity Engine Hakkında</h2>
-      <p>Bu uygulama Unity oyun motoru ile geliştirilmiştir. Unity, bazı yapılandırmalarda varsayılan olarak anonim hata raporlama (crash reporting) veya tanılama verisi toplayabilir. Bu tür veriler, varsa, doğrudan Unity Technologies tarafından işlenmekte olup geliştiricinin erişimine sunulmamaktadır.</p>
-      <p>Unity'nin veri toplama pratikleri hakkında daha fazla bilgi için Unity Technologies'in gizlilik politikasını inceleyebilirsiniz: <a class="contact-link" href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">unity.com/legal/privacy-policy</a></p>
-      <span class="chip warn">Motor düzeyinde uyarı</span>
-    </div>
-
-    <div class="section">
-      <div class="section-label">03 — Üçüncü Taraflar</div>
-      <h2>Üçüncü Taraf Hizmetler</h2>
-      <p>Uygulamanın mevcut sürümünde reklam ağları, analitik platformlar veya sosyal medya entegrasyonu gibi üçüncü taraf hizmetler aktif olarak kullanılmamaktadır. Gelecek güncellemelerde bu tür hizmetler eklenebilir; bu durumda politika buna göre revize edilecektir.</p>
-    </div>
-
-    <div class="section">
-      <div class="section-label">04 — İzinler</div>
-      <h2>Cihaz İzinleri</h2>
-      <p>Uygulama, mevcut sürümünde konum, mikrofon, kamera veya rehber gibi hassas izinler talep etmemektedir. İleride eklenecek özellikler için yalnızca gerekli olan izinler, kullanıcıya açıkça bildirilerek talep edilecektir.</p>
-    </div>
-
-    <div class="section">
-      <div class="section-label">05 — Çocuklar</div>
-      <h2>Çocukların Gizliliği</h2>
-      <p>Uygulama, 13 yaşın altındaki kullanıcılardan bilerek kişisel veri toplamamaktadır. Uygulamanın çocuklara yönelik veri topladığını düşünüyorsanız lütfen bizimle iletişime geçin.</p>
-    </div>
-
-    <div class="section">
-      <div class="section-label">06 — İletişim</div>
-      <h2>Bize Ulaşın</h2>
-      <p>Bu gizlilik politikasıyla ilgili sorularınız için: <a class="contact-link" href="mailto:gdgoncampusdou@gmail.com">gdgoncampusdou@gmail.com</a></p>
-    </div>
-
+    <footer>
+      <span>GDG On Campus DOU oyunları için geçerlidir / Applies to GDG On Campus DOU games</span>
+      <span>© 2026 GDG On Campus DOU - All rights reserved</span>
+    </footer>
   </div>
-
-  <footer>
-    <span>MazeRoll uygulaması için geçerlidir</span>
-    <span>© 2025 — Tüm hakları saklıdır</span>
-  </footer>
-
-</div>
 </body>
 </html>
